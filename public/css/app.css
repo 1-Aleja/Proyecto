@@ -1,0 +1,30 @@
+.tableinventary{
+    color:blue;
+    margin-top: 30px;
+    border: green 2px solid; 
+}
+.title{
+    text-align: center;
+    margin-top:20px;
+}
+.h4{
+    text-align: center;
+  
+}
+.table{
+    margin: 20px; ;
+}
+.hola{
+    margin-top: 80px;
+    color:blueviolet;
+    text-align:center;
+}
+.cantidad{
+    text-align:initial;
+    margin: 20px;
+    background-color: lightpink;
+
+}
+.product{
+    background-color: lightblue;
+}

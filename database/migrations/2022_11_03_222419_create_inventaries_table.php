@@ -14,15 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('inventaries', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
             $table->string('reference');
             $table->string('name');
             $table->integer('cost_price');
             $table->integer('sale_price');
             $table->integer('quantity_available');
-
-
+            $table->timestamps();
         });
     }
 
@@ -33,6 +31,5 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('inventaries');
     }
 };

@@ -5,7 +5,28 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class inventary extends Model
+class Inventary extends Model
 {
+
+    public $timestamps = false;
     use HasFactory;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'id',
+        'reference',
+        'name',
+        'role',
+    ];
+
+public function getInventaries()
+{
+    Inventary::all();
+    
+}
+    
 }

@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Facades\App\Models\Inventary;
 
 class ShopController extends Controller
 {
+    
     /**
      * Create a new controller instance.
      *
@@ -21,8 +23,9 @@ class ShopController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function getinventary()
     {
-        return view('shop');
+        $inventario=Inventary::all(['id','reference','name','cost_price','sale_price','quantity_available','name',]); 
+        return view('shop',compact('inventario'));
     }
 }
