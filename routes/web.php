@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/shop', [App\Http\Controllers\ShopController::class, 'getinventary'])->name('shop');
 Route::get('/reference/{reference}', [App\Http\Controllers\ReferenceController::class, 'getreference'])->name('reference');
+Route::get('/toy',[App\Http\Controllers\ToyController::class,'gettoy'])->name('toy');

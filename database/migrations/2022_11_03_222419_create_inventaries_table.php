@@ -20,6 +20,10 @@ return new class extends Migration
             $table->integer('cost_price');
             $table->integer('sale_price');
             $table->integer('quantity_available');
+            $table->string('description');
+            $table->string('comment');
+            $table->string('toy_image')->nullable();
+
             $table->timestamps();
         });
     }

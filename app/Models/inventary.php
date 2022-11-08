@@ -25,8 +25,7 @@ class Inventary extends Model
 
 public function getInventaries()
 {
-    Inventary::all();
-    
+    Inventary::all();   
 }
     
 }

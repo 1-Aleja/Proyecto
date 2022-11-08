@@ -20,11 +20,22 @@
     text-align:center;
 }
 .cantidad{
-    text-align:initial;
+
+    padding: 5px;
     margin: 20px;
     background-color: lightpink;
+    height: 40px;
 
 }
 .product{
     background-color: lightblue;
+}
+.color,.card{
+    background-color: rgb(247, 142, 207);
+    margin:20px;
+}
+.comentarios{
+    background-color: rgb(243, 120, 216);
+    margin:20px;
+
 }
