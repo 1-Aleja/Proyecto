@@ -17,15 +17,27 @@ class Inventary extends Model
      * @var array
      */
     protected $fillable = [
-        'id',
         'reference',
         'name',
-        'role',
+        'cost_price',
+        'sale_price',
+        'quantity_available',
+        'description',
+        'comment',
+        'toy_image'
     ];
 
-public function getInventaries()
-{
-    Inventary::all();   
-}
+    public function getInventaries()
+    {
+        Inventary::all();
+        
+    }
+    public function getFilterByName($nombre)
+    {
+        return  Inventary::where('name', 'like', '%'.$nombre.'%')->get();
+    }
+    
+    
+
     
 }

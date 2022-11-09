@@ -15,13 +15,12 @@ return new class extends Migration
     {
         Schema::create('inventaries', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('reference');
-            $table->string('name');
-            $table->integer('cost_price');
-            $table->integer('sale_price');
-            $table->integer('quantity_available');
-            $table->string('description');
-            $table->string('comment');
+            $table->string('reference')->nullable();
+            $table->string('name')->nullable();
+            $table->integer('cost_price')->nullable();
+            $table->integer('sale_price')->nullable();
+            $table->integer('quantity_available')->nullable();
+            $table->string('description')->nullable();
             $table->string('toy_image')->nullable();
 
             $table->timestamps();

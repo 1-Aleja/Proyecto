@@ -7,7 +7,6 @@ use Facades\App\Models\Inventary;
 
 class ShopController extends Controller
 {
-    
     /**
      * Create a new controller instance.
      *
@@ -23,9 +22,9 @@ class ShopController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function getinventary()
+    public function getinventary(Request $request)
     {
-        $inventario=Inventary::all(['id','reference','name','cost_price','sale_price','quantity_available','name',]); 
-        return view('shop',compact('inventario'));
+        $inventario=Inventary::getFilterByName($request->search);
+        return view('shop', compact('inventario'));
     }
 }

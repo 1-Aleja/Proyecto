@@ -12,9 +12,9 @@ class InventaryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+       //
     }
 
     /**
@@ -35,7 +35,8 @@ class InventaryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Inventary::insert(request()->all());
+        
     }
 
     /**
@@ -58,6 +59,7 @@ class InventaryController extends Controller
     public function edit(inventary $inventary)
     {
         //
+      
     }
 
     /**
