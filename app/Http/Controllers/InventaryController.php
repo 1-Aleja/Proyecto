@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\inventary;
 use Illuminate\Http\Request;
+use App\Models\Edit;
 
 class InventaryController extends Controller
 {
@@ -58,7 +59,7 @@ class InventaryController extends Controller
      */
     public function edit(inventary $inventary)
     {
-        //
+
       
     }
 

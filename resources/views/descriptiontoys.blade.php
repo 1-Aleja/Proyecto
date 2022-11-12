@@ -13,12 +13,13 @@
                         <h4>Cantidad {{$inventario->quantity_available}}</h4>
                         <h3>Descripción</h3>
                         <h4>{{$inventario->description}}</h4>
+
                     </div>
                    
                 </div>
                 <div class='m-3'>
-                    <form  action="/toy" method="GET">
-                    <button type="submit" class="btn btn-primary">Editar</button>
+                    <form  action="/toy/{{$inventario->id}}" method="GET">
+                        <button type="submit" class="btn btn-primary">Editar</button>
                     </form>
                 </div>
             </div>

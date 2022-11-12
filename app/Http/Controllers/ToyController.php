@@ -5,13 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Facades\App\Models\Toy;
 use Facades\App\Models\Inventary;
+use Bouncer;
+use App\Models\Constant;
 
 class ToyController extends Controller
 {
-    public function gettoy()
+    public function gettoy($id)
     {
-        return view('toy');
-        
+    if (!Bouncer::is(auth()->user())->a(Constant::ROL_CELLAR)) {
+    $inventario=Inventary::where('id', $id)->first();
+    return view('toy', ['inventario'=>$inventario]);
+    }else {
+        return view('welcome');
+    }
+
     }
     public function getedit(Request $request)
     {

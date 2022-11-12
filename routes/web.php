@@ -17,12 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes(['register'=>false]);
+Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/shop', [App\Http\Controllers\ShopController::class, 'getinventary'])->name('shop');
-Route::get('/reference/{reference}', [App\Http\Controllers\ReferenceController::class, 'getreference'])->name('reference');
-Route::get('/toy', [App\Http\Controllers\ToyController::class, 'gettoy'])->name('toy');
-Route::get('/toy/edit', [App\Http\Controllers\EditController::class, 'update'])->name('update');
+Route::get('/reference/{id}', [App\Http\Controllers\ReferenceController::class, 'getreference'])->name('reference');
+Route::get('/toy/edit/{id}', [App\Http\Controllers\EditController::class, 'update'])->name('update');
 Route::get('/create-toy/insert', [App\Http\Controllers\InventaryController::class, 'store'])->name('edit');
 Route::get('/create-toy', [App\Http\Controllers\ToyController::class, 'create'])->name('create-toy');
-
+Route::get('/toy/{id}', [App\Http\Controllers\ToyController::class, 'gettoy'])->name('toy');

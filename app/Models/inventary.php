@@ -4,12 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Trait\Database;
 
 class Inventary extends Model
 {
 
     public $timestamps = false;
     use HasFactory;
+    use Database;
 
     /**
      * The attributes that are mass assignable.
@@ -36,7 +38,11 @@ class Inventary extends Model
     {
         return  Inventary::where('name', 'like', '%'.$nombre.'%')->get();
     }
-    
+    public function saveOrUpdate(array $data)
+    {
+        return $this->persist(Inventary::class, $data);
+    }
+
     
 
     

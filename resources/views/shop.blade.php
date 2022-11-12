@@ -36,7 +36,7 @@
             <td>{{$item->sale_price}}</td>
             <td>{{$item->quantity_available}}</td>
             <td >
-            <form  action="reference/{{$item->reference}}" method="GET">
+            <form  action="reference/{{$item->id}}" method="GET">
                 <button type="submit" class="btn btn-primary">Referencia</button>
             </form>
             </td>

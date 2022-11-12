@@ -9,10 +9,11 @@
         <div class="comentarios" >
           <div>
 
-            <form method="GET" action="/toy/edit" enctype="multipart/form-data">
+            <form method="GET" action="/toy/edit/{{$inventario->id}}" enctype="multipart/form-data">
               <a>Referencia</a>
+              <input type="hidden"name='id' value="{{$inventario->id}}">
               <div class="w-25 input-group mb-3">
-                <input name='reference'type="number" class="form-control" placeholder="Referencia" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input name='reference'type="number" class="form-control" placeholder="Referencia" aria-label="Recipient's username" aria-describedby="basic-addon2" value="{{$inventario->reference}}" readonly>
               </div>
               <a>Cantidad</a>
               <div class="w-25 input-group mb-3">
@@ -40,7 +41,6 @@
               </div>
               <div class="mt-3">
               <button type="submit" class="btn btn-primary">Actualizar</button>
-            </form>
               </div>
             </form>
           </div>
