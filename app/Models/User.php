@@ -43,4 +43,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function validaterole()
+    { 
+        $user=User::find('id');
+        $user->assign('admin');
+    }
+   
 }

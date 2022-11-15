@@ -25,3 +25,5 @@ Route::get('/toy/edit/{id}', [App\Http\Controllers\EditController::class, 'updat
 Route::get('/create-toy/insert', [App\Http\Controllers\InventaryController::class, 'store'])->name('edit');
 Route::get('/create-toy', [App\Http\Controllers\ToyController::class, 'create'])->name('create-toy');
 Route::get('/toy/{id}', [App\Http\Controllers\ToyController::class, 'gettoy'])->name('toy');
+Route::get('register/users', 'Auth\RegisterController@showRegistrationForm')->name('register');
+

@@ -12,31 +12,31 @@ class ToyController extends Controller
 {
     public function gettoy($id)
     {
-    if (!Bouncer::is(auth()->user())->a(Constant::ROL_CELLAR)) {
-    $inventario=Inventary::where('id', $id)->first();
-    return view('toy', ['inventario'=>$inventario]);
-    }else {
-        return view('welcome');
-    }
+        if (!Bouncer::is(auth()->user())->a(Constant::ROL_CELLAR)) {
+            $inventario=Inventary::where('id', $id)->first();
+            return view('toy', ['inventario'=>$inventario]);
+        } else {
+            return view('welcome');
+        }
+        
+
 
     }
     public function getedit(Request $request)
     {
         dd($request->all());
         $edit=$request->only('name', 'cost_price', 'sale_price', 'quantity_available', 'description', 'toy_image');
-       
+
         dd($edit);
     }
 
     public function create(Request $request)
     {
-
         try {
             return view('toy.create');
         } catch (\Throwable $th) {
             \Log::info('Error create toy');
         }
-
     }
 
     public function store(Request $request)

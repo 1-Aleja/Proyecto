@@ -9,6 +9,7 @@ class Constant extends Model
 {
     use HasFactory;
     const ROL_ADMIN = 'admin';
-    const ROL_CELLAR_MANAGER='cellar_manager';
+    const ROL_CELLAR_MANAGER='cellarmanager';
     const ROL_CELLAR='cellar';
 }
+

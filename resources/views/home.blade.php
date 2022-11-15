@@ -21,7 +21,10 @@
                     <div>
                         <a href="{{ route('create-toy') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Ingresar juguete</a>
                     </div>
-                    
+                    <div>
+                        <a href="{{ route('register/users') }}" class="ml-4 text-sm text-gray-700 dark:text-danger-500 underline">Registrarse</a>
+                    </div>
+                   
                 </div>
             </div>
         </div>
