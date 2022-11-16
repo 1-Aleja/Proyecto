@@ -22,9 +22,15 @@
                         <a href="{{ route('create-toy') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Ingresar juguete</a>
                     </div>
                     <div>
-                        <a href="{{ route('register/users') }}" class="ml-4 text-sm text-gray-700 dark:text-danger-500 underline">Registrarse</a>
+                    @can('create-users')
+                        <div>
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-danger-500 underline">Registrar Usuario</a>
+                        </div>
+                        <div>
+                            <a href="{{ route('listuser') }}" class="ml-4 text-sm text-gray-700 dark:text-danger-500 underline">Listar Usuarios</a>
+                        </div>
+                        @endcan
                     </div>
-                   
                 </div>
             </div>
         </div>

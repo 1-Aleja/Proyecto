@@ -15,13 +15,14 @@
                         <h4>{{$inventario->description}}</h4>
 
                     </div>
-                   
                 </div>
+                @cannot('list-products') 
                 <div class='m-3'>
                     <form  action="/toy/{{$inventario->id}}" method="GET">
                         <button type="submit" class="btn btn-primary">Editar</button>
                     </form>
                 </div>
+                @endcan
             </div>
             @else
             <h1>No existe la referencia</h1>
@@ -30,3 +31,4 @@
     </div>
 </div>
 @endsection
+

@@ -12,7 +12,5 @@ class EditController extends Controller
     public function update(Request $request)
     {
         Inventary::saveOrUpdate(request()->all());
-      
-
     }
 }

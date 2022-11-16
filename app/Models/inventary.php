@@ -42,6 +42,10 @@ class Inventary extends Model
     {
         return $this->persist(Inventary::class, $data);
     }
+    public function listuser()
+    {
+        User::all();
+    }
 
     
 

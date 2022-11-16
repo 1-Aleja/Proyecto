@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth; 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,5 +25,7 @@ Route::get('/toy/edit/{id}', [App\Http\Controllers\EditController::class, 'updat
 Route::get('/create-toy/insert', [App\Http\Controllers\InventaryController::class, 'store'])->name('edit');
 Route::get('/create-toy', [App\Http\Controllers\ToyController::class, 'create'])->name('create-toy');
 Route::get('/toy/{id}', [App\Http\Controllers\ToyController::class, 'gettoy'])->name('toy');
-Route::get('register/users', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::get('/listuser', [App\Http\Controllers\ListUserController::class, 'listuser'])->name('listuser');
+Route::post('/store', [App\Http\Controllers\UserController::class, 'store'])->name('store');
+
 
