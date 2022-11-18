@@ -8,7 +8,8 @@
       <div class="card">
         <div class="comentarios" >
           <div>
-            <form method="GET" action={{url('/create-toy/insert')}} enctype="multipart/form-data">
+            <form method="POST" action="{{ route('create') }}" enctype="multipart/form-data">
+              @csrf
               <a>Referencia</a>
               <div class="w-25 input-group mb-3">
                 <input name='reference'type="number" class="form-control" placeholder="Referencia" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
@@ -35,7 +36,7 @@
               </div>
               <div class="form-group">
                 <label for="exampleFormControlFile1"></label>
-                <input name=toy_image type="file" class="form-control-file" id="exampleFormControlFile1" required>
+                <input type="file" name="file[]" accept="image/*" class="input-field-text">
               </div>
               <div class="mt-3">
               <button type="submit" class="btn btn-primary">Ingresar Producto</button>

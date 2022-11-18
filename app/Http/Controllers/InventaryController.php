@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\inventary;
 use Illuminate\Http\Request;
 use App\Models\Edit;
+use Illuminate\Support\Facades\Storage;
 
 class InventaryController extends Controller
 {
@@ -36,8 +37,17 @@ class InventaryController extends Controller
      */
     public function store(Request $request)
     {
-        Inventary::insert(request()->all());
         
+        if( $request->file('file') ){
+
+            $file = $request->file('file')[0];
+  
+            $nameFile = 'mariaDB' . "_" . date('m_d_Y_h_i_s', time()) ."_". $file->getClientOriginalName();
+  
+            Storage::disk('local')->put($nameFile, \File::get($file));
+  
+          }
+        Inventary::insert(request()->all());
     }
 
     /**

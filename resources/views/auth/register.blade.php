@@ -13,11 +13,7 @@
                         <div class="col-md-6 offset-md-4 mb-3 w-25">
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Elige un rol</label>
-                                <select class="form-control" id="exampleFormControlSelect1">
-                                    <option name='role_id' value='5'>Administrador</option>
-                                    <option name='role_id' value='6'>Rol Bodega</option>
-                                    <option name='role_id' value='8'>Jefe de Bodega</option>
-                                </select>
+                               
                             </div>
                         </div>
 

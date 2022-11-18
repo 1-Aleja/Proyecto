@@ -43,10 +43,11 @@ class ToyController extends Controller
     {
         try {
             $requestField = $request->all();
+            dd($requestField);
             $requestField[''] = 0;
             Inventary::saveOrUpdate($request);
             $request->session()->flash('status', 'Toy was create successful!');
-            return view('toy.create');
+            return back();
         } catch (\Throwable $th) {
             \Log::info('Error create toy');
         }

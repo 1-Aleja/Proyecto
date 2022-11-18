@@ -24,11 +24,9 @@
                     <div>
                     @can('create-users')
                         <div>
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-danger-500 underline">Registrar Usuario</a>
-                        </div>
-                        <div>
-                            <a href="{{ route('listuser') }}" class="ml-4 text-sm text-gray-700 dark:text-danger-500 underline">Listar Usuarios</a>
-                        </div>
+                            <a href="{{ route('list') }}" class="ml-4 text-sm text-gray-700 dark:text-danger-500 underline">Listar Usuarios</a>
+                            </div>
+                            
                         @endcan
                     </div>
                 </div>
